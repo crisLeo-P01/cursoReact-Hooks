@@ -19,10 +19,18 @@ export const FocusScreen = () => {
       <h1 className="text-2xl font-thin text-white">Focus Screen</h1>
 
       {/* El atributo ref nos permite asociar la referencia al input */}
-      <input ref={inputRef} type="text" className="bg-white text-black px-4 py-2 rounded-md" autoFocus />
+      <input
+        ref={inputRef}
+        type="text"
+        className="bg-white text-black px-4 py-2 rounded-md"
+        autoFocus
+      />
 
       {/* El atributo ref nos permite asociar la referencia al input */}
-      <button className="bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer" onClick={handleClick}>
+      <button
+        className="bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer"
+        onClick={handleClick}
+      >
         Set Focus
       </button>
     </div>
