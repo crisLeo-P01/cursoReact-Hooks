@@ -1,73 +1,137 @@
-# React + TypeScript + Vite
+### 🧩 Ejercicio 1 — Contador básico
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Objetivo:** Manejar un número con useState.
 
-Currently, two official plugins are available:
+Crea un componente Counter.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Muestra un número en pantalla (por ejemplo, 0).
 
-## React Compiler
+Agrega dos botones: Incrementar y Decrementar.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+Cada clic cambia el valor del contador.
 
-## Expanding the ESLint configuration
+💡 Concepto: uso básico de useState y actualización del estado numérico.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 🧩 Ejercicio 2 — Mostrar/Ocultar texto
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+**Objetivo:** Alternar visibilidad con un booleano.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+Crea un componente ToggleText.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Ten un texto (por ejemplo: “Hola React”) y un botón “Mostrar/Ocultar”.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+Cada clic cambia si el texto se muestra o no.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+💡 Concepto: estado booleano y renderizado condicional.
+
+---
+
+### 🧩 Ejercicio 3 — Input controlado
+
+**Objetivo:** Enlazar un input con el estado.
+
+Crea un componente InputName.
+
+Usa un input tipo texto y guarda su valor en un useState.
+
+Muestra debajo lo que el usuario va escribiendo.
+
+💡 Concepto: inputs controlados.
+
+---
+
+### 🧩 Ejercicio 4 — Lista dinámica (añadir ítems)
+
+**Objetivo:** Trabajar con arrays en el estado.
+
+Crea un componente TaskList.
+
+Ten un input y un botón “Agregar”.
+
+Cada vez que haces clic, agrega el valor a una lista visible.
+
+No permitas agregar cadenas vacías.
+
+💡 Concepto: actualizar arrays en useState.
+
+---
+
+### 🧩 Ejercicio 5 — Eliminar ítem de una lista
+
+**Objetivo:** Modificar el array filtrando elementos.
+
+A partir del ejercicio anterior, agrega un botón “❌” a cada tarea.
+
+Al hacer clic, elimina esa tarea del estado.
+
+💡 Concepto: uso de filter() con useState.
+
+---
+
+### 🧩 Ejercicio 6 — Cambiar tema (dark / light)
+
+Objetivo: Cambiar estilos según el estado.
+
+Crea un botón “Cambiar tema”.
+
+Usa un booleano o string en el estado para alternar entre “light” y “dark”.
+
+Cambia el color de fondo y texto según el estado.
+
+💡 Concepto: aplicar clases dinámicas con el estado.
+
+---
+
+### 🧩 Ejercicio 7 — Contador con pasos
+
+**Objetivo:** Actualizar el estado usando su valor previo.
+
+Crea un contador que se incremente de a N pasos (por ejemplo, +2 o +5).
+
+Usa setCount(prev => prev + step).
+
+💡 Concepto: actualización basada en el valor anterior.
+
+---
+
+### 🧩 Ejercicio 8 — Formulario con varios campos
+
+**Objetivo:** Manejar un objeto con varios valores.
+
+Crea un formulario con nombre, email y edad.
+
+Guarda todos los valores en un único useState({}).
+
+Muestra en tiempo real los valores ingresados.
+
+💡 Concepto: uso de objetos en el estado y “spread operator”.
+
+---
+
+### 🧩 Ejercicio 9 — Checkbox múltiple
+
+**Objetivo:** Manejar una lista de seleccionados.
+
+Crea una lista de hobbies con checkbox.
+
+Guarda en el estado un array de hobbies seleccionados.
+
+Muestra debajo los que el usuario eligió.
+
+💡 Concepto: estado complejo con arrays y condicionales.
+
+---
+
+### 🧩 Ejercicio 10 — Temporizador con start/stop
+
+**Objetivo:** Integrar useState con setInterval.
+
+Crea un temporizador que muestre segundos transcurridos.
+
+Botones: Iniciar, Detener y Reiniciar.
+
+Usa useState para el tiempo y useEffect para el intervalo.
+
+💡 Concepto: estado + efectos colaterales.
