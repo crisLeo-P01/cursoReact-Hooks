@@ -8,6 +8,8 @@ import { InputName } from './ejerciciosUseState/InputName';
 import { TaskList } from './ejerciciosUseState/TaskList';
 import { DarkLightWithBoolean } from './ejerciciosUseState/DarkLightWithBoolean';
 import { DarkLightWithString } from './ejerciciosUseState/DarkLightWithString';
+import StepCounter from './ejerciciosUseState/StepCounter';
+import { Hobbies } from './ejerciciosUseState/Hobbies';
 
 
 createRoot(document.getElementById('root')!).render(
@@ -19,6 +21,8 @@ createRoot(document.getElementById('root')!).render(
       <TaskList />
       <DarkLightWithBoolean />
       <DarkLightWithString />
+      <StepCounter />
+      <Hobbies />
     </div>
 
   </StrictMode>
