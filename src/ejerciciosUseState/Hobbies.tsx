@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const Hobbies: React.FC = () => {
+export const Hobbies = () => {
   const hobbiesDisponibles = ["Música", "Deporte", "Lectura", "Videojuegos", "Viajar"];
 
   // Estado que guarda los hobbies seleccionados
@@ -9,7 +9,7 @@ export const Hobbies: React.FC = () => {
   // Maneja el cambio de cada checkbox
   const handleCheckboxChange = (hobby: string): void => {
     setHobbiesSeleccionados((prev) =>
-      prev.includes(hobby)
+      prev.includes(hobby) // si el hobby ya estaba seleccionado
         ? prev.filter((item) => item !== hobby) // si ya estaba, lo quitamos
         : [...prev, hobby] // si no estaba, lo agregamos
     );
